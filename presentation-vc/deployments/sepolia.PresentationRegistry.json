@@ -1,0 +1,243 @@
+{
+  "address": "0xd4FA166cF7ACF6F560A35cc7e966F56ec1219e5c",
+  "network": "sepolia",
+  "abi": [
+    {
+      "type": "constructor",
+      "payable": false,
+      "inputs": []
+    },
+    {
+      "type": "event",
+      "anonymous": false,
+      "name": "PresentationCreated",
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "id",
+          "indexed": true
+        },
+        {
+          "type": "string",
+          "name": "holderDid",
+          "indexed": false
+        },
+        {
+          "type": "string",
+          "name": "mappingCID",
+          "indexed": false
+        },
+        {
+          "type": "bytes32",
+          "name": "vpJwtHash",
+          "indexed": false
+        },
+        {
+          "type": "uint256",
+          "name": "relatedCredentialId",
+          "indexed": false
+        },
+        {
+          "type": "uint256",
+          "name": "timestamp",
+          "indexed": false
+        }
+      ]
+    },
+    {
+      "type": "event",
+      "anonymous": false,
+      "name": "PresentationRevoked",
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "id",
+          "indexed": true
+        },
+        {
+          "type": "uint256",
+          "name": "timestamp",
+          "indexed": false
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "createPresentation",
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        {
+          "type": "string",
+          "name": "holderDid"
+        },
+        {
+          "type": "string",
+          "name": "mappingCID"
+        },
+        {
+          "type": "bytes32",
+          "name": "vpJwtHash"
+        },
+        {
+          "type": "uint256",
+          "name": "relatedCredentialId"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "getPresentation",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "id"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "uint256"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "bytes32"
+        },
+        {
+          "type": "uint256"
+        },
+        {
+          "type": "uint256"
+        },
+        {
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "getPresentationsForHolder",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [
+        {
+          "type": "string",
+          "name": "holderDid"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "uint256[]"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "owner",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "address"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "presentationCount",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "presentations",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [
+        {
+          "type": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": "id"
+        },
+        {
+          "type": "string",
+          "name": "holderDid"
+        },
+        {
+          "type": "string",
+          "name": "mappingCID"
+        },
+        {
+          "type": "bytes32",
+          "name": "vpJwtHash"
+        },
+        {
+          "type": "uint256",
+          "name": "relatedCredentialId"
+        },
+        {
+          "type": "uint256",
+          "name": "createdAt"
+        },
+        {
+          "type": "bool",
+          "name": "revoked"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "revokePresentation",
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "id"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "transferOwnership",
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        {
+          "type": "address",
+          "name": "newOwner"
+        }
+      ],
+      "outputs": []
+    }
+  ],
+  "deployedAt": "2025-08-11T10:07:01.355Z"
+}
